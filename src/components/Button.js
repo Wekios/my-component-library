@@ -83,6 +83,7 @@ const Button = styled.button`
   font-family: ${defaultTheme.primaryFont};
   border: none;
   transition: background-color 200ms linear, color 200ms linear;
+  margin: 4px;
 
   &:hover {
     background-color: ${defaultTheme.primaryHoverColor};

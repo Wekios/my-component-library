@@ -14,12 +14,13 @@ ReactDOM.render(
     <PrimaryButton modifiers={["small", "warning"]}>
       Small warning
     </PrimaryButton>
-    <PrimaryButton>Hello world</PrimaryButton>
     <SecondaryButton modifiers="large">Bye world</SecondaryButton>
-    <SecondaryButton modifiers={["large", "warning"]}>
+    <SecondaryButton modifiers={["large", "warning", "secondaryButtonWarning"]}>
       Large warning
     </SecondaryButton>
-    <TertiaryButton modifiers="small">Hmm world</TertiaryButton>
+    <TertiaryButton modifiers={["success", "tertiaryButtonSuccess"]}>
+      Hmm world
+    </TertiaryButton>
   </React.StrictMode>,
   document.getElementById("root")
 );
