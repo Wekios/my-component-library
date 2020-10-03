@@ -6,15 +6,22 @@ import { GlobalStyle, darkTheme, defaultTheme } from "./utils";
 
 const App = () => {
   const [useDarkTheme, setUseDarkTheme] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <React.StrictMode>
       <ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
         <button
-          onClick={() => setUseDarkTheme((dt) => !dt)}
+          onClick={() => setUseDarkTheme((s) => !s)}
           style={{ margin: "0 16px 24px", padding: "8px", background: "none" }}
         >
           Toggle theme
+        </button>
+        <button
+          onClick={() => setShowModal(!showModal)}
+          style={{ margin: "0 16px 24px", padding: "8px", background: "none" }}
+        >
+          Toggle modal
         </button>
         <div
           style={{
@@ -28,7 +35,7 @@ const App = () => {
             justifyContent: "space-around",
           }}
         >
-          <SignUpModal />
+          <SignUpModal show={showModal} setShow={setShowModal} />
         </div>
         <GlobalStyle />
       </ThemeProvider>
